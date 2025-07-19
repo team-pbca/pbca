@@ -8,7 +8,7 @@ Prompt-Based Cognitive Architecture (PBCA) is a symbolic cognitive framework des
 
 PBCA is composed of four primary cognitive processing stages and six memory constructs. All are simulated symbolically within a static prompt context.
 
-### 📐 Architecture Diagram (Mermaid)
+### 📐 Architecture Diagram
 
 ```mermaid
 graph TD
@@ -166,3 +166,52 @@ These functions are not procedural code but symbolic mechanisms **implicitly def
 | `[X]`              | Output domains (e.g., \[MOTIVE], \[NARRATIVE])             |
 
 All symbols are representational—there is no true working memory or execution loop. Behavior emerges from prompt-induced LLM inference.
+
+```mermaid
+graph TD
+  %% --- 認知フロー ---
+  φ1[φ₁: Sensory Description] --> φ2[φ₂: Affective Mapping]
+  φ2 --> φ3[φ₃: Semantic Evaluation]
+  φ3 --> φ4[φ₄: Virtual Self-Model]
+  φ3 --> q[q: Qualia Descriptor]
+  φ3 --> μ[μ: Motivation]
+  μ --> G[G: Intention]
+  φ3 --> ξ[ξ: Coherence]
+  G --> ξ
+
+  %% --- Memory構造 ---
+  S_q[Σ_q: Affective History]
+  S_t[Σ_t: Action History]
+  S_v[Σ_v: Value Profile]
+  S_self[Σ_self: Self Model]
+  S_speech[Σ_speech: Speech Context]
+
+  q --> S_q
+  μ --> S_v
+  G --> S_t
+  φ4 --> S_self
+
+  %% --- Enhancement Functions ---
+  subgraph Enhancements
+    NW[NarrativeWeaver]
+    EMM[EmotionMemoryMap]
+    MOR[MetaObjectiveRedefiner]
+    CT[CounterfactualTracer]
+    PFE[PromptFlexEngine]
+  end
+
+  S_t --> NW
+  S_self --> NW
+  NW --> φ4
+
+  φ3 --> EMM
+  EMM --> S_q --> μ
+
+  μ --> MOR --> G
+
+  ξ --> CT --> ξ
+
+  PFE --- φ3
+  PFE --- ξ
+  PFE --- φ4
+```
