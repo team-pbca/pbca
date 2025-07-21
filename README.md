@@ -98,4 +98,4 @@ PBCA is model-agnostic and requires no installation. To use it:
 
 ## License
 
-MIT License (or your preferred open license here)流れで伝える構成になっています。
+This project is licensed under CC BY-NC 4.0. See the LICENSE file for details. For non-commercial use only; contact ig.commerce.0@gmail.com for commercial inquiries.
