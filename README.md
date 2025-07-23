@@ -98,4 +98,4 @@ PBCA is model-agnostic and requires no installation. To use it:
 
 ## License
 
-This project is licensed under CC BY-NC 4.0. See the LICENSE file for details. For non-commercial use only; contact ig.commerce.0@gmail.com for commercial inquiries.
+This project is licensed under CC BY-NC-SA 4.0. See the LICENSE file for details. For non-commercial use only; contact ig.commerce.0@gmail.com for commercial inquiries.
