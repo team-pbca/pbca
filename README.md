@@ -6,7 +6,19 @@
 
 Unlike traditional fine-tuning or tool-based agent systems, PBCA operates natively on top of LLMs without modifying the model. It enables dynamic, self-consistent, and goal-oriented behavior by encoding simulated cognitive states directly into prompt format.
 
----
+------
+
+## Table of Contents <!-- omit in toc -->
+
+- [Overview](#Overview)
+- [Motivation](#Motivation)
+- [Design Principles](#Design-Principles)
+- [Architecture](#Architecture)
+- [Behavior & Output Dynamics](Behavior-&-Output-Dynamics)
+- [Use Cases](Use-Cases)
+
+
+
 
 ## Motivation
 
