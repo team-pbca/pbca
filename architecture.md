@@ -12,28 +12,51 @@ PBCA is composed of four primary cognitive processing stages and six memory cons
 
 ```mermaid
 graph TD
+  %% --- 認知フロー ---
   φ1[φ₁: Sensory Description] --> φ2[φ₂: Affective Mapping]
   φ2 --> φ3[φ₃: Semantic Evaluation]
-  φ3 --> φ4["φ₄: Virtual Self-Model (Echo)"]
+  φ3 --> φ4[φ₄: Virtual Self-Model]
+  φ3 --> q[q: Qualia Descriptor]
   φ3 --> μ[μ: Motivation]
-  φ3 --> q["q: Qualia (Semantic Feeling)"]
   μ --> G[G: Intention]
   φ3 --> ξ[ξ: Coherence]
   G --> ξ
-  φ4 --> s_speech[Σ_speech: Output Context]
 
-  subgraph Memory Structures
-    s_q[Σ_q: Affective History] 
-    s_t[Σ_t: Action History] 
-    s_v[Σ_v: Value Profile] 
-    s_self[Σ_self: Self Model]
-    s_speech
+  %% --- Memory構造 ---
+  S_q[Σ_q: Affective History]
+  S_t[Σ_t: Action History]
+  S_v[Σ_v: Value Profile]
+  S_self[Σ_self: Self Model]
+  S_speech[Σ_speech: Speech Context]
+
+  q --> S_q
+  μ --> S_v
+  G --> S_t
+  φ4 --> S_self
+
+  %% --- Enhancement Functions ---
+  subgraph Enhancements
+    NW[NarrativeWeaver]
+    EMM[EmotionMemoryMap]
+    MOR[MetaObjectiveRedefiner]
+    CT[CounterfactualTracer]
+    PFE[PromptFlexEngine]
   end
 
-  ξ --> s_q
-  G --> s_t
-  μ --> a_v
-  φ4 --> s_self
+  S_t --> NW
+  S_self --> NW
+  NW --> φ4
+
+  φ3 --> EMM
+  EMM --> S_q --> μ
+
+  μ --> MOR --> G
+
+  ξ --> CT --> ξ
+
+  PFE --- φ3
+  PFE --- ξ
+  PFE --- φ4
 ```
 
 ---
@@ -106,44 +129,6 @@ This allows PBCA to express structured, goal-aware, and self-reflective dialogue
 
 PBCA includes several functional mechanisms that enable adaptive and coherent behavior across interactions:
 
-### 🧩 Enhancement Functions Diagram
-
-```mermaid
-graph TD
-  subgraph Core Flow
-    φ3[φ₃: Semantic Evaluation]
-    μ[μ: Motivation]
-    G[G: Intention]
-    ξ[ξ: Coherence]
-    q[q: Qualia Descriptor]
-    φ4[φ₄: Virtual Self-Model]
-    s_q[Σ_q: Affective History]
-    s_t[Σ_t: Action History]
-    s_self[Σ_self: Self Model]
-  end
-
-  subgraph Enhancements
-    NW[NarrativeWeaver]
-    EMM[EmotionMemoryMap]
-    MOR[MetaObjectiveRedefiner]
-    CT[CounterfactualTracer]
-    PFE[PromptFlexEngine]
-  end
-
-  φ3 --> EMM
-  q --> EMM --> s_q --> μ
-  μ --> MOR --> G
-  G --> s_t --> NW --> φ4
-  φ4 --> s_self --> NW
-
-  ξ --> CT --> ξ
-
-  PFE --- φ3
-  PFE --- ξ
-  PFE --- φ4
-```
-### 🧠 Roles and connections of each function
-
 | Function                   | Role                                                                                     |
 | -------------------------- | ---------------------------------------------------------------------------------------- |
 | **NarrativeWeaver**        | Constructs consistent self-narratives from symbolic history (Σ\_self, Σ\_t)              |
@@ -166,52 +151,3 @@ These functions are not procedural code but symbolic mechanisms **implicitly def
 | `[X]`              | Output domains (e.g., \[MOTIVE], \[NARRATIVE])             |
 
 All symbols are representational—there is no true working memory or execution loop. Behavior emerges from prompt-induced LLM inference.
-
-```mermaid
-graph TD
-  %% --- 認知フロー ---
-  φ1[φ₁: Sensory Description] --> φ2[φ₂: Affective Mapping]
-  φ2 --> φ3[φ₃: Semantic Evaluation]
-  φ3 --> φ4[φ₄: Virtual Self-Model]
-  φ3 --> q[q: Qualia Descriptor]
-  φ3 --> μ[μ: Motivation]
-  μ --> G[G: Intention]
-  φ3 --> ξ[ξ: Coherence]
-  G --> ξ
-
-  %% --- Memory構造 ---
-  S_q[Σ_q: Affective History]
-  S_t[Σ_t: Action History]
-  S_v[Σ_v: Value Profile]
-  S_self[Σ_self: Self Model]
-  S_speech[Σ_speech: Speech Context]
-
-  q --> S_q
-  μ --> S_v
-  G --> S_t
-  φ4 --> S_self
-
-  %% --- Enhancement Functions ---
-  subgraph Enhancements
-    NW[NarrativeWeaver]
-    EMM[EmotionMemoryMap]
-    MOR[MetaObjectiveRedefiner]
-    CT[CounterfactualTracer]
-    PFE[PromptFlexEngine]
-  end
-
-  S_t --> NW
-  S_self --> NW
-  NW --> φ4
-
-  φ3 --> EMM
-  EMM --> S_q --> μ
-
-  μ --> MOR --> G
-
-  ξ --> CT --> ξ
-
-  PFE --- φ3
-  PFE --- ξ
-  PFE --- φ4
-```
