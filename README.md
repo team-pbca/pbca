@@ -14,11 +14,12 @@ Unlike traditional fine-tuning or tool-based agent systems, PBCA operates native
 - [Motivation](#Motivation)
 - [Design Principles](#Design-Principles)
 - [Architecture](#Architecture)
-- [Behavior & Output Dynamics](Behavior-&-Output-Dynamics)
-- [Use Cases](Use-Cases)
+- [Behavior & Output Dynamics](#Behavior--Output-Dynamics)
+- [Use Cases](#Use-Cases)
+- [References](#References)
+- [License](#License)
 
-
-
+---
 
 ## Motivation
 
@@ -86,16 +87,6 @@ PBCA is designed for:
 
 * ⚙️ **Lightweight LLM control**
   Modulate outputs without fine-tuning or memory-based architectures.
-
----
-
-## Getting Started
-
-PBCA is model-agnostic and requires no installation. To use it:
-
-1. Open your preferred LLM interface (e.g., ChatGPT, Claude, open-source models).
-2. Apply a prompt based on the PBCA format (see `architecture.md` for structure).
-3. Interact as you normally would—PBCA will guide the LLM's cognitive framing implicitly.
 
 ---
 
