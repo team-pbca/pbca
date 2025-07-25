@@ -12,30 +12,50 @@ PBCA is composed of four primary cognitive processing stages and six memory cons
 
 ```mermaid
 graph TD
-  %% --- 認知フロー ---
-  φ1[φ₁: Sensory Description] --> φ2[φ₂: Affective Mapping]
-  φ2 --> φ3[φ₃: Semantic Evaluation]
-  φ3 --> φ4[φ₄: Virtual Self-Model]
-  φ3 --> q[q: Qualia Descriptor]
-  φ3 --> μ[μ: Motivation]
-  μ --> G[G: Intention]
-  φ3 --> ξ[ξ: Coherence]
+
+  %% --- 認知処理段階 ---
+  subgraph Cognitive Processing Stages
+    φ1[φ₁: Sensory Description]
+    φ2[φ₂: Affective Mapping]
+    φ3[φ₃: Semantic Evaluation]
+    φ4[φ₄: Virtual Self-Model]
+    q[q: Qualia Descriptor]
+    μ[μ: Motivation]
+    G[G: Intention]
+    ξ[ξ: Coherence]
+  end
+
+  φ1 --> φ2
+  φ2 --> φ3
+  φ3 --> φ4
+  φ3 --> q
+  φ3 --> μ
+  φ3 --> ξ
+  μ --> G
   G --> ξ
 
-  %% --- Memory構造 ---
-  S_q[Σ_q: Affective History]
-  S_t[Σ_t: Action History]
-  S_v[Σ_v: Value Profile]
-  S_self[Σ_self: Self Model]
-  S_speech[Σ_speech: Speech Context]
+  %% --- メモリ構造 ---
+  subgraph Memory Constructs
+    S_q[Σ_q: Affective History]
+    S_t[Σ_t: Action History]
+    S_v[Σ_v: Value Profile]
+    S_self[Σ_self: Self Model]
+    S_speech[Σ_speech: Speech Context]
+  end
 
   q --> S_q
   μ --> S_v
   G --> S_t
   φ4 --> S_self
 
-  %% --- Enhancement Functions ---
-  subgraph Enhancements
+  %% --- Σ_speechの接続 ---
+  G --> S_speech
+  q --> S_speech
+  ξ --> S_speech
+  φ4 --> S_speech
+
+  %% --- 拡張機能 ---
+  subgraph Enhancement Functions
     NW[NarrativeWeaver]
     EMM[EmotionMemoryMap]
     MOR[MetaObjectiveRedefiner]
