@@ -6,19 +6,6 @@
 
 Unlike traditional fine-tuning or tool-based agent systems, PBCA operates natively on top of LLMs without modifying the model. It enables dynamic, self-consistent, and goal-oriented behavior by encoding simulated cognitive states directly into prompt format.
 
-------
-
-## Table of Contents <!-- omit in toc -->
-
-- [Overview](#Overview)
-- [Motivation](#Motivation)
-- [Design Principles](#Design-Principles)
-- [Architecture](#Architecture)
-- [Behavior & Output Dynamics](#Behavior--Output-Dynamics)
-- [Use Cases](#Use-Cases)
-- [References](#References)
-- [License](#License)
-
 ---
 
 ## Motivation
@@ -34,12 +21,12 @@ PBCA addresses these limitations by injecting a **virtualized cognitive control 
 PBCA is guided by three key principles:
 
 1. **Prompt as Substrate**
-   The prompt is treated not as an instruction set, but as a container for symbolic cognitive dynamics—defining how internal components such as affect, motivation, and intention interact over time.
+   The prompt is treated not as an instruction set, but as a container for symbolic cognitive dynamics—defining how internal components such as affect, motivation, and intention interact over time.  
 
-2. **Minimalism and Modularity**
+3. **Minimalism and Modularity**
    All functionality is encoded in a compact prompt structure, built from modular components that can be extended or replaced without compromising clarity.
 
-3. **Transparency and Coherence**
+4. **Transparency and Coherence**
    Outputs generated under PBCA exhibit interpretable behavioral patterns, enabling symbolic traceability and internal consistency across turns.
 
 ---
@@ -92,10 +79,13 @@ PBCA is designed for:
 
 ## References
 
-* Andreas, J. (2022). *Language Models as Agents*
-* Schlegoff et al. (2024). *Prompt Programming as a Cognitive Interface*
-* OpenAI. (2023–2025). *Function Calling and System Prompts in GPT Models*
-* Related: Anthropic (Constitutional AI), Google DeepMind (Toolformer)
+- Anthony, J. A. (2025). *The Language of Thought: Prompt Design as Cognitive Interface*. Agentic AI & Future of Intelligence.  https://medium.com/agentic-ai-the-future-of-intelligence/the-language-of-thought-prompt-design-as-cognitive-interface-3365c5f6ad9a  
+
+- Sato, M. (2025). *The Way We Prompt: Conceptual Blending, Neural Dynamics, and Prompt-Induced Transitions in LLMs*. arXiv.  https://arxiv.org/abs/2505.10948
+
+- Brucks, M., & Toubia, O. (2025). *Prompt architecture induces methodological artifacts in large language models*. PLoS One, 20(4).  https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0319159
+
+- Other foundational works: Andreas (2022); Schlegoff et al. (2024); OpenAI (2023–2025); Anthropic, etc.
 
 ---
 
