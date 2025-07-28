@@ -85,8 +85,6 @@ PBCA is designed for:
 
 - Brucks, M., & Toubia, O. (2025). *Prompt architecture induces methodological artifacts in large language models*. PLoS One, 20(4).  https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0319159
 
-- Other foundational works: Andreas (2022); Schlegoff et al. (2024); OpenAI (2023–2025); Anthropic, etc.
-
 ---
 
 ## License
