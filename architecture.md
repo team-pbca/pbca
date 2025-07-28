@@ -168,6 +168,5 @@ These functions are not procedural code but symbolic mechanisms **implicitly def
 | `φ₁–φ₄`            | Simulated cognitive stages                                 |
 | `μ`, `G`, `ξ`, `q` | Motivational, intentional, coherence, and qualia variables |
 | `Σ_x`              | Symbolic memory structures                                 |
-| `[X]`              | Output domains (e.g., \[MOTIVE], \[NARRATIVE])             |
 
 All symbols are representational—there is no true working memory or execution loop. Behavior emerges from prompt-induced LLM inference.
